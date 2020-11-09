@@ -5,5 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
   </head>
-  <body></body>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Weather Conditions</h1>
+      </div>
+    </div>
+
+    <!-- main area to display current selection weather and 5 day forecast -->
+    <main>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">CITY NAME</h5>
+          <p class="card-text">Temperature:</p>
+          <p class="card-text">Humidity:</p>
+          <p class="card-text">Wind Speed:</p>
+          <p class="card-text">UV Index:</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- aside area to display other common city selections -->
+    <aside>
+      <div class="card" style="width: 18rem">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Seattle</li>
+          <li class="list-group-item">Las Vegas</li>
+          <li class="list-group-item">Chicago</li>
+          <li class="list-group-item">Austin</li>
+          <li class="list-group-item">Los Angeles</li>
+          <li class="list-group-item">Orlando</li>
+          <li class="list-group-item">New York</li>
+          <li class="list-group-item">Denver</li>
+        </ul>
+      </div>
+    </aside>
+  </body>
 </html>
