@@ -15,13 +15,34 @@
   <body>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">Weather Conditions</h1>
+        <h1 class="display-4">Weather Dashboard</h1>
       </div>
     </div>
 
     <!-- main area to display current selection weather and 5 day forecast -->
     <main class="d-flex flex-row">
       <div class="col-4">
+        <!-- button for city search -->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- automatic city searches -->
         <div class="card" style="width: 18rem">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Seattle</li>
@@ -36,6 +57,7 @@
         </div>
       </div>
 
+      <!-- this card displays current conditions in the city that the user specifies -->
       <div class="col-8">
         <div class="card" style="width: 18rem">
           <div class="card-body">
@@ -46,6 +68,8 @@
             <p class="card-text">UV Index:</p>
           </div>
         </div>
+
+        <!-- this card displays 5 day forecast in the city that the user specifies -->
         <div>
           <h5 class="card-title">5 Day Forecast</h5>
           <div class="d-flex flex-row">
