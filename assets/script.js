@@ -1,11 +1,20 @@
-var userSearch;
+var city = $("#cities").val();
+var singleDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d30adb1683f1aae50c1159cab23299c7";
+var fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=d30adb1683f1aae50c1159cab23299c7";
 
-function getUserSearch() {
-    var userInput = $("#form-control").value;
-    userSearch = userInput;
-}
-console.log(userSearch);
+$("#button-addon2").on("click", search)
 
-document.getElementById("button-addon2").addEventListener("click", getUserSearch);
+function search() {
+    // request(singleDayURL);
 
-// var queryURL = "api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+    $.ajax({
+        url: singleDayURL,
+        method: "GET"
+    }).then(function (response) {
+        $("#cities").text(JSON.stringify(response));
+    });
+};
+
+console.log(city);
+console.log(singleDayURL);
+console.log(response);
