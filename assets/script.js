@@ -8,8 +8,6 @@ function daySearch() {
     var singleDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
     var fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey;
 
-    // var uvRUL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + searchLat + "&lon=" + searchLong + "&appid=" + apiKey;
-
     console.log(city);
     $.ajax({
         url: singleDayURL,
@@ -23,7 +21,6 @@ function daySearch() {
 
         //transfer content to HTML
         $(".city").html("<h1>" + response.name + " Weather</h1>");
-        // var tempF = (response.main.temp - 273.15) *1.80 + 32;
         $(".temp").text("Temperature: " + tempF.toFixed(2));
         $(".humidity").text("Humidity: " + response.main.humidity);
         $(".wind").text("Wind Speed: " + response.wind.speed);
@@ -33,18 +30,23 @@ function daySearch() {
         var searchLong = response.coord.lon;
         console.log(searchLat);
         console.log(searchLong);
-        // var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + searchLat + "&lon=" + searchLong + "&appid=" + apiKey;
 
-        // function uvIndex() {
-        //     $.ajax({
-        //         url: singleDayURL,
-        //         method: "GET"
-        //     }).then(function (response) {
-        //         console.log(response);
-        //         $(".uvIndex").text("UV Index: " + uvRUL);
-        //     })
-        // };
+        // findUV();
 
+        function findUV() {
+            var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + searchLat + "&lon=" + searchLong + "&appid=" + apiKey;
+            console.log(uvURL);
+            $.ajax({
+                url: uvURL,
+                method: "GET"
+            }).then(function (response) {
+                console.log(response);
+                $(".uvIndex").text("UV Index: " + response.value);
+            })
+        };
+
+
+        findUV();
         forecastSearch();
 
         function forecastSearch() {
