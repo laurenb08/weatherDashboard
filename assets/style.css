@@ -29,6 +29,9 @@ h1.display-4 {
 
 .card-body {
   height: 250px;
+  border-color: lightgray;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .card-title {
@@ -36,10 +39,15 @@ h1.display-4 {
   font-size: x-large;
 }
 
+.forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
 .col-2 {
   width: 16%;
   height: 175px;
-  background-color: lightblue;
+  padding: 15px;
   border-color: black;
   border-style: solid;
   border-width: 1px;
