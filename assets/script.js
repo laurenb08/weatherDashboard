@@ -45,7 +45,6 @@ function daySearch() {
             })
         };
 
-
         findUV();
         forecastSearch();
 
@@ -57,7 +56,7 @@ function daySearch() {
                 console.log(response);
 
                 //convert temp to farenheit
-
+                var tempF = (response.main.temp - 273.15) * 1.80 + 32;
 
                 //transfer content to HTML
             });
