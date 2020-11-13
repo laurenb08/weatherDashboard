@@ -55,10 +55,40 @@ function daySearch() {
             }).then(function (response) {
                 console.log(response);
 
-                //convert temp to farenheit
-                var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+                //convert temp to farenheit for day 1
+                var tempDay1 = (response.list[1].main.temp - 273.15) * 1.80 + 32;
 
-                //transfer content to HTML
+                //transfer content to HTML for day 1
+                $(".day1Temp").text("Temp: " + tempDay1.toFixed(2));
+                $(".day1Humidity").text("Humidity: : " + response.list[1].main.humidity);
+
+                //convert temp to farenheit for day 2
+                var tempDay2 = (response.list[9].main.temp - 273.15) * 1.80 + 32;
+
+                //transfer content to HTML for day 2
+                $(".day2Temp").text("Temp: " + tempDay2.toFixed(2));
+                $(".day2Humidity").text("Humidity: : " + response.list[9].main.humidity);
+
+                //convert temp to farenheit for day 3
+                var tempDay3 = (response.list[17].main.temp - 273.15) * 1.80 + 32;
+
+                //transfer content to HTML for day 3
+                $(".day3Temp").text("Temp: " + tempDay3.toFixed(2));
+                $(".day3Humidity").text("Humidity: : " + response.list[17].main.humidity);
+
+                //convert temp to farenheit for day 4
+                var tempDay4 = (response.list[25].main.temp - 273.15) * 1.80 + 32;
+
+                //transfer content to HTML for day 4
+                $(".day4Temp").text("Temp: " + tempDay4.toFixed(2));
+                $(".day4Humidity").text("Humidity: : " + response.list[25].main.humidity);
+
+                //convert temp to farenheit for day 5
+                var tempDay5 = (response.list[33].main.temp - 273.15) * 1.80 + 32;
+
+                //transfer content to HTML for day 5
+                $(".day5Temp").text("Temp: " + tempDay2.toFixed(2));
+                $(".day5Humidity").text("Humidity: : " + response.list[33].main.humidity);
             });
         }
     });
