@@ -8,19 +8,20 @@ Used to look up the weather in any city at any given time.
 
 [View the GitHub Repo for this project here](https://github.com/laurenb08/weatherDashboard)
 
-## **Changes Made**
+## **Functionality**
 
-- Organized CSS to match the order of the HTML
-- Added alt text to images to help with accessibility
-- Fixed broken SEO header link
-- Fixed site title to make it more relevent and descriptive
-- Removed unnecessary div tags with classes and replaced them with semantic elements like "header", "content", "benefit", and "footer"
-- Added spacing between HTML elements to make it easier to read
+- User enters city to search in the search bar
+- Current weather conditions are displayed
+- 5-Day Forecast is displayed
+- User can also search by clicking on the city names on the left hand side of the page
 
 ## **Images**
 
 Image of HTML:
-![Image of updated HTML](https://github.com/laurenb08/code-refractor/raw/main/assets/images/UpdatedHTML.png)
+![Image of updated HTML](https://github.com/laurenb08/weatherDashboard/raw/main/assets/HTML.png)
 
 Image of CSS:
-![Image of updated CSS](https://github.com/laurenb08/code-refractor/raw/main/assets/images/UpdatedCSS.png)
+![Image of updated CSS](https://github.com/laurenb08/weatherDashboard/raw/main/assets/CSS.png)
+
+Image of JS:
+![Image of update JS](https://github.com/laurenb08/weatherDashboard/raw/main/assets/JS.png)
