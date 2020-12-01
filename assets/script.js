@@ -1,15 +1,26 @@
+var apiKey = "d30adb1683f1aae50c1159cab23299c7";
 
-$("#search").on("click", daySearch)
+$("#search").on("click", function () {
+
+    var city = $("#citiesSearch").val();
+    var cityBtn = $(`<button class = "list-group-item myBtn" data-city="${city}">${city}</button>`);
+    // localStorage.setItem('city', city);
+    $(".list-group").prepend(cityBtn);
+    console.log(city);
+    daySearch(city);
+});
 
 function daySearch() {
     // request(singleDayURL);
     var city = $("#citiesSearch").val();
-
-    var apiKey = "d30adb1683f1aae50c1159cab23299c7";
     var singleDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
     var fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey;
 
-    console.log(city);
+    // var cityBtn = $(`<button class = "list-group-item myBtn" id = "cityButton">${city}</button>`);
+    // localStorage.setItem('city', city);
+    // $(".list-group").prepend(cityBtn);
+
+    // console.log(city);
     $.ajax({
         url: singleDayURL,
         method: "GET"
@@ -124,14 +135,16 @@ function daySearch() {
     });
 }
 
+
+
 $(".myBtn").on("click", buttonSearch)
 
 function buttonSearch() {
     var cityButton = $(this).text();
     console.log(cityButton);
 
-    var apiKey = "d30adb1683f1aae50c1159cab23299c7";
-    var singleDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityButton + "&appid=" + apiKey;
+    // var apiKey = "d30adb1683f1aae50c1159cab23299c7";
+    // var singleDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityButton + "&appid=" + apiKey;
     var fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityButton + "&appid=" + apiKey;
 
 
