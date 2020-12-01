@@ -17,11 +17,5 @@ Used to look up the weather in any city at any given time.
 
 ## **Images**
 
-Image of HTML:
-![Image of updated HTML](https://github.com/laurenb08/weatherDashboard/raw/main/assets/HTML.png)
-
-Image of CSS:
-![Image of updated CSS](https://github.com/laurenb08/weatherDashboard/raw/main/assets/CSS.png)
-
-Image of JS:
-![Image of update JS](https://github.com/laurenb08/weatherDashboard/raw/main/assets/JS.png)
+Gif of project:
+![](https://github.com/laurenb08/weatherDashboard/raw/main/assets/Weather%20Dashboard.gif)
